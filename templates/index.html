@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html >
+<head>
+  <meta charset="UTF-8">
+  <title>eBike Sharing Counts</title>
+  <link href='https://fonts.googleapis.com/css?family=Pacifico' rel='stylesheet' type='text/css'>
+<link href='https://fonts.googleapis.com/css?family=Arimo' rel='stylesheet' type='text/css'>
+<link href='https://fonts.googleapis.com/css?family=Hind:300' rel='stylesheet' type='text/css'>
+<link href='https://fonts.googleapis.com/css?family=Open+Sans+Condensed:300' rel='stylesheet' type='text/css'>
+<link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+
+</head>
+
+<body>
+
+
+<style>
+body {
+  background-image: url("https://images.pexels.com/photos/7216927/pexels-photo-7216927.jpeg?cs=srgb&dl=pexels-anna-tarazevich-7216927.jpg&fm=jpg");
+  background-position: 200%;
+  background-size: cover;
+}
+</style>
+
+
+
+ <div class="login">
+	<h1>eBikeShare</h1>
+
+     <!-- Main Input For Receiving Query to our ML -->
+    <form action="{{ url_for('predict')}}"method="post">
+
+         <input type="number" name="season" placeholder="season" min=1 max=4/>
+
+        <input type="number" name="holiday" placeholder="holiday" min=0 max=1/>
+
+		<input type="number" name="month" placeholder="month" min=1 max=12/>
+
+        <input type="number" name="hour" placeholder="hour" min=0 max=23/>
+"
+        <input type="number" name="weekday" placeholder="weekday" min=0 max=6/>
+
+        <input type="number" name="weather" placeholder="weather"  min=1 max=4>
+
+        <input type="number" name="temperature" placeholder="temp"/>
+
+        <input type="number" name="humidity" placeholder="humidity"/>
+
+        <input type="number" name="windspeed" placeholder="windspeed"/>
+
+
+        <input type="submit" value="Submit" class="btn btn-secondary">
+    </form>
+
+   <br>
+   <br>
+     <h3>{{ prediction_text }}</h3>
+
+ <br>
+ <br>
+     <p>Thanks</p>
