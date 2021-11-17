@@ -11,13 +11,4 @@ research.
 The goal here is to build an end-to-end regression task. Here the user will provide the
 data and the result will be given by the best performing hyper tuned Machine Learning
 model. 
-#Table of Content
--Demo
--Overview
--Dataset
--Installation
--Deployement
--Documentation
--Directry Tree
--Teachnology Used
--Future Scope
+
