@@ -40,7 +40,7 @@ The code is Written in Python 3.7
 Heroku
 Login or signup in order to create virtual app. You can either connect your github profile or download ctl to manually deploy this project.
 
-## Documentation
+
 
 ## Technology Used
 Python
